@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flex_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:alignContent="flex_start"
+        app:alignItems="center"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start">
+
+        <Button
+            android:id="@+id/btn_draw_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="draw_color" />
+
+        <Button
+            android:id="@+id/btn_draw_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="draw_circle" />
+
+        <Button
+            android:id="@+id/btn_draw_rect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="draw_rect" />
+
+        <Button
+            android:id="@+id/btn_draw_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="draw_point" />
+
+        <Button
+            android:id="@+id/btn_draw_oval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="draw_oval" />
+
+        <Button
+            android:id="@+id/btn_draw_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="draw_line" />
+        <Button
+            android:id="@+id/btn_draw_arc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="draw_arc" />
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+
+</LinearLayout>
+
