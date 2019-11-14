@@ -1,7 +1,5 @@
 package com.feb.cusview;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -11,9 +9,13 @@ import com.feb.cusview.view.CircleView;
 import com.feb.cusview.view.ColorView;
 import com.feb.cusview.view.LineView;
 import com.feb.cusview.view.OvalView;
+import com.feb.cusview.view.PathAssistView;
+import com.feb.cusview.view.PathView;
 import com.feb.cusview.view.PointView;
 import com.feb.cusview.view.RectView;
 import com.google.android.flexbox.FlexboxLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -68,6 +70,18 @@ public class MainActivity extends AppCompatActivity {
                 showDrawArc();
             }
         });
+        findViewById(R.id.btn_draw_path).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDrawPath();
+            }
+        });
+        findViewById(R.id.btn_draw_path_assist).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDrawPathAssist();
+            }
+        });
     }
 
     private void showDrawColor() {
@@ -111,4 +125,17 @@ public class MainActivity extends AppCompatActivity {
         mCvLayout.removeAllViews();
         mCvLayout.addView(arcView);
     }
+
+    private void showDrawPath() {
+        PathView pathView = new PathView(this);
+        mCvLayout.removeAllViews();
+        mCvLayout.addView(pathView);
+    }
+
+    private void showDrawPathAssist() {
+        PathAssistView pathAssistView = new PathAssistView(this);
+        mCvLayout.removeAllViews();
+        mCvLayout.addView(pathAssistView);
+    }
+
 }
