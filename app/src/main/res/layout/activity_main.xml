@@ -70,6 +70,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="draw_path_assist" />
+        <Button
+            android:id="@+id/btn_draw_clip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="draw_clip" />
+        <Button
+            android:id="@+id/btn_draw_matrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="draw_matrix" />
+
+        <Button
+            android:id="@+id/btn_draw_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="draw_camera" />
 
     </com.google.android.flexbox.FlexboxLayout>
 

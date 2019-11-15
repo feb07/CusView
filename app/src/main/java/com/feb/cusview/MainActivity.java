@@ -1,9 +1,14 @@
 package com.feb.cusview;
 
+import android.animation.Animator;
+import android.animation.AnimatorSet;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.feb.cusview.clip.CameraView;
+import com.feb.cusview.clip.ClipView;
+import com.feb.cusview.clip.MatrixView;
 import com.feb.cusview.view.ArcView;
 import com.feb.cusview.view.CircleView;
 import com.feb.cusview.view.ColorView;
@@ -82,6 +87,24 @@ public class MainActivity extends AppCompatActivity {
                 showDrawPathAssist();
             }
         });
+        findViewById(R.id.btn_draw_clip).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDrawClip();
+            }
+        });
+        findViewById(R.id.btn_draw_matrix).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDrawMatrix();
+            }
+        });
+        findViewById(R.id.btn_draw_camera).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDrawCamera();
+            }
+        });
     }
 
     private void showDrawColor() {
@@ -136,6 +159,24 @@ public class MainActivity extends AppCompatActivity {
         PathAssistView pathAssistView = new PathAssistView(this);
         mCvLayout.removeAllViews();
         mCvLayout.addView(pathAssistView);
+    }
+
+    private void showDrawClip() {
+        ClipView clipView = new ClipView(this);
+        mCvLayout.removeAllViews();
+        mCvLayout.addView(clipView);
+    }
+
+    private void showDrawMatrix() {
+        MatrixView matrixView = new MatrixView(this);
+        mCvLayout.removeAllViews();
+        mCvLayout.addView(matrixView);
+    }
+
+    private void showDrawCamera(){
+        CameraView cameraView = new CameraView(this);
+        mCvLayout.removeAllViews();
+        mCvLayout.addView(cameraView);
     }
 
 }

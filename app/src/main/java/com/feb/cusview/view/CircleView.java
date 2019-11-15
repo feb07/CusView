@@ -3,7 +3,9 @@ package com.feb.cusview.view;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.LinearGradient;
 import android.graphics.Paint;
+import android.graphics.Shader;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -43,7 +45,8 @@ public class CircleView extends View {
         mPaint.setStrokeWidth(5);
         canvas.drawCircle(300, 250, 200, mPaint);
         mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setColor(Color.BLACK);
+        Shader shader = new LinearGradient(600, 250, 1050, 250, Color.parseColor("#ff6666"), Color.parseColor("#2193F3"), Shader.TileMode.CLAMP);
+        mPaint.setShader(shader);
         canvas.drawCircle(800, 250, 200, mPaint);
         mPaint.setColor(Color.GRAY);
         mPaint.setStyle(Paint.Style.STROKE);
